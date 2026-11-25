@@ -1,0 +1,55 @@
+:root {
+  --azul: #1557c0;
+  --marino: #13306b;
+  --texto: #1d2433;
+  --suave: #5b6478;
+  --fondo: #f4f7fc;
+  --borde: #dbe3f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Nunito", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.6;
+  font-size: 17px;
+}
+header {
+  background: var(--marino);
+  color: #fff;
+  padding: 28px 20px 24px;
+}
+header .marca { font-weight: 900; font-size: 15px; letter-spacing: .04em; opacity: .85; }
+header h1 { margin: 6px 0 4px; font-size: 28px; line-height: 1.2; }
+header p { margin: 0; color: #c9d7f2; font-size: 15px; }
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+h2 { color: var(--marino); font-size: 21px; margin: 34px 0 8px; }
+h3 { font-size: 17px; margin: 20px 0 6px; }
+a { color: var(--azul); }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+.nota {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-left: 5px solid var(--azul);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 18px 0;
+}
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; margin: 12px 0; font-size: 15px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--borde); vertical-align: top; }
+th { background: #e8eefa; color: var(--marino); }
+.pasos { counter-reset: paso; list-style: none; padding: 0; }
+.pasos li { counter-increment: paso; background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 12px 14px 12px 52px; position: relative; margin: 10px 0; }
+.pasos li::before { content: counter(paso); position: absolute; left: 14px; top: 11px; width: 26px; height: 26px; border-radius: 50%; background: var(--azul); color: #fff; font-weight: 900; text-align: center; line-height: 26px; font-size: 14px; }
+.tarjetas { display: grid; gap: 12px; margin-top: 20px; }
+.tarjetas a { display: block; background: #fff; border: 1px solid var(--borde); border-radius: 14px; padding: 16px 18px; text-decoration: none; color: var(--texto); }
+.tarjetas a strong { color: var(--marino); font-size: 18px; display: block; }
+.tarjetas a span { color: var(--suave); font-size: 15px; }
+footer { color: var(--suave); font-size: 14px; border-top: 1px solid var(--borde); margin-top: 40px; padding-top: 16px; }
+.pendiente { background: #fff3c4; padding: 0 4px; border-radius: 4px; }
